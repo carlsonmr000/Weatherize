@@ -62,6 +62,7 @@ Timeframes:
 
 HTML
     layout: 2 hours
+    
 CSS
     layout: 3 hours
     styling: 3 hours
@@ -74,5 +75,6 @@ Javascript
    Render results: 3 hours
     
 Debugging: 3 hours
+
 Deployment: 1 hour
 Present 15 minues
