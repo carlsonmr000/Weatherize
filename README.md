@@ -60,9 +60,19 @@ Priority Matrix: https://github.com/carlsonmr000/Weatherize/issues/2#issue-91504
 
 Timeframes: 
 
-HTML: 1 hour
-CSS: 8 hours
-Javascript: 8 hours
+HTML
+    layout: 2 hours
+CSS
+    layout: 3 hours
+    styling: 3 hours
+    media query:2 hour
+    
+Javascript
+    
+   Axios call: 3 hours
+   Functions: 3 hours
+   Render results: 3 hours
+    
 Debugging: 3 hours
 Deployment: 1 hour
 Present 15 minues
