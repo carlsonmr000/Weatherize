@@ -1,7 +1,8 @@
-# Weatherize
-Weather app
+# Project Overview
 
-App Title: Weatherize
+## Weatherize
+
+## Project Description
 
 App Description: Users can look up a city, state, or country and get the weather for the day. It will return the current temperature, min-temp, max-temp, sunset/sunrise, and wind.
 
@@ -49,7 +50,8 @@ Nav bar
 Post-MVP: 
 button to see sunset/sunrise
 hover added to search button
-
+raindrop animation for rainy days
+sun rays animation for sunny days
 
 Goals: 
 Tuesday:HTML/CSS 
@@ -62,13 +64,19 @@ Priority Matrix: https://github.com/carlsonmr000/Weatherize/issues/2#issue-91504
 
 Timeframes: 
 
-HTML
-    layout: 2 hours
+HTML: 
+        basic layout 3 hours
+        define target audience  1 hours
+        figure out user navigation  1 hours
+        decide what functions to add  2 hours
+        build landing page  3 hours
+        adding tags for css 1 hours
     
 CSS
-    layout: 3 hours
+    basic layout: 3 hours
     styling: 3 hours
-    media query:2 hour
+    add desktop media query 2 hours
+    add mobile media query: 1 hour
     
 Javascript
     
@@ -76,7 +84,9 @@ Javascript
    Functions: 3 hours
    Render results: 3 hours
     
+Testing: 3 hours
+    fixing errors
+    
 Debugging: 3 hours
 
-Deployment: 1 hour
-Present 15 minues
+ 
