@@ -31,7 +31,7 @@ API Snippet:{
     },
     
     
-Wireframe:
+Wireframe: https://github.com/carlsonmr000/Weatherize/issues/1#issue-915036469
 
 
 MVP: 
