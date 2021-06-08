@@ -37,8 +37,11 @@ Wireframe:
 MVP: 
 Search bar and button
 Nav bar
+dropdown menu for search
 
-Post-MVP: A list of additional/advanced features you would like to include in your app after you have met MVP.
+Post-MVP: 
+button to see sunset/sunrise
+
 
 Goals: 
 Tuesday:HTML/CSS 
