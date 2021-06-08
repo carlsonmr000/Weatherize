@@ -1,6 +1,6 @@
 # Project Overview
 
-## Weatherize
+## WEATHERIZE
 
 ## Project Description
 
