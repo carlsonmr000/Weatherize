@@ -35,12 +35,18 @@ Wireframe: https://github.com/carlsonmr000/Weatherize/issues/1#issue-915036469
 
 
 MVP: 
+HTML, CSS, and Javascript
+Style with flexbox
+Axios to make the data request
+Media query
+Deploy on Surge
 Search bar and button
 Nav bar
-dropdown menu for search
+
 
 Post-MVP: 
 button to see sunset/sunrise
+hover added to search button
 
 
 Goals: 
@@ -50,7 +56,7 @@ Thursday: Debugging
 Friday:Deployment
 Monday: Present
 
-Priority Matrix: 
+Priority Matrix: https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
 Timeframes: 
 
