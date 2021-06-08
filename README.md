@@ -93,19 +93,33 @@ https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
 ## Timeframe
 
-### HTML
+|          Component        |Priority | Estimated Time | Time Invested | Actual Time |
+| : ------------------------| ------  | ------------   | -----------   | ------------|
+| Initial HTML basic layout |   H     |     3 hours    |               |             |
+| Define Target Audie              |   H
+| Decide User Navigation  
+| Create functions
+| Build landing page  
+| CSS layout  
+| Styling 
+| Media query  
+| General Research 
+| Debugging  
+| Total  
 
-   -basic layout 3 hours
-   
-   -define target audience  1 hours
-   
-   -figure out user navigation  1 hours
-   
-   -decide what functions to add  2 hours
-   
-   -build landing page  3 hours
-   
-   -adding tags for css 1 hours
+## Goals
+
+| Day | Priority | Estimated Time | HTML| CSS | Axios | Debugging|Javascript
+| --- | :---: |  :---: | :---: | :---: | :---: | :---: | :---: |
+| Tuesday| H | 6hrs|  X | X |   |  |   |
+| Wednesday | H | 8hrs|   |  X|  X |X  | x  |
+| Thursday | H | 7hrs|    |  |  X | x|  x |
+| Friday| H | 6hrs|    |  |  X |  X|   x|
+| Saturday | M | 2hrs|   X |  X|   |  |   |
+| Sunday | M | 1hrs| X  | X |   |  |   |
+| Total | H | 30hrs|    |  |   |  |   | (edited) 
+
+ 
     
 ### CSS
 
