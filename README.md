@@ -4,11 +4,15 @@
 
 ## Project Description
 
-App Description: Users can look up a city, state, or country and get the weather for the day. It will return the current temperature, min-temp, max-temp, sunset/sunrise, and wind.
+Users can look up a city, state, or country and get the weather for the day. It will return the current temperature, min-temp, max-temp, sunset/sunrise, and wind.
 
-API: api.openweathermap.org/data/2.5/weather?q={city name}&appid=09f877c9272bc64e109cd676a8422c51
+## API and Data Sample
 
-API Snippet:{
+Open Weather Map API: api.openweathermap.org/data/2.5/weather?q={city name}&appid=09f877c9272bc64e109cd676a8422c51
+
+## API Snippet
+
+{
     "coord": {
         "lon": -87.65,
         "lat": 41.85
@@ -31,13 +35,16 @@ API Snippet:{
         "humidity": 78
     },
     
-    
+## Desktop and Mobile Wireframes
+
 Desktop Wireframe: https://github.com/carlsonmr000/Weatherize/issues/1#issue-915036469
 
 Phone Wireframe: https://github.com/carlsonmr000/Weatherize/issues/3#issue-915196581
 
+### MVP/PostMVP
 
 MVP: 
+
 HTML, CSS, and Javascript
 Style with flexbox
 Axios to make the data request
@@ -45,7 +52,6 @@ Media query
 Deploy on Surge
 Search bar and button
 Nav bar
-
 
 Post-MVP: 
 button to see sunset/sunrise
