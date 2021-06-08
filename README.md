@@ -41,58 +41,70 @@ Desktop Wireframe: https://github.com/carlsonmr000/Weatherize/issues/1#issue-915
 
 Phone Wireframe: https://github.com/carlsonmr000/Weatherize/issues/3#issue-915196581
 
-### MVP/PostMVP
+## MVP/PostMVP
 
-MVP: 
+#### MVP 
 
-HTML, CSS, and Javascript
-Style with flexbox
-Axios to make the data request
-Media query
-Deploy on Surge
-Search bar and button
-Nav bar
+-HTML, CSS, and Javascript
+-Style with flexbox
+-Use external api
+-Use axios to make the data request
+-Media query
+-Deploy on Surge
+-Search bar and button
+-Nav bar
 
-Post-MVP: 
-button to see sunset/sunrise
-hover added to search button
-raindrop animation for rainy days
-sun rays animation for sunny days
+#### PostMVP  
 
-Goals: 
+-add api for weather history
+-button to see sunset/sunrise
+-hover added to search button
+-raindrop animation for rainy days
+-sun rays animation for sunny days
+
+### Goals: 
 Tuesday:HTML/CSS 
 Wednesday:Javascript 
 Thursday: Debugging
 Friday:Deployment
 Monday: Present
 
-Priority Matrix: https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
+## Priority Matrix 
 
-Timeframes: 
+https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
-HTML: 
-        basic layout 3 hours
-        define target audience  1 hours
-        figure out user navigation  1 hours
-        decide what functions to add  2 hours
-        build landing page  3 hours
-        adding tags for css 1 hours
+## Timeframe
+
+### HTML
+
+   -basic layout 3 hours
+   -define target audience  1 hours
+   -figure out user navigation  1 hours
+   -decide what functions to add  2 hours
+   -build landing page  3 hours
+   -adding tags for css 1 hours
     
-CSS
-    basic layout: 3 hours
-    styling: 3 hours
-    add desktop media query 2 hours
-    add mobile media query: 1 hour
+### CSS
+
+   -basic layout: 3 hours
+   -styling: 3 hours
+   -add desktop media query 2 hours
+   -add mobile media query: 1 hour
     
-Javascript
+### Javascript
     
-   Axios call: 3 hours
-   Functions: 3 hours
-   Render results: 3 hours
+   -Axios call: 3 hours
+   -Functions: 3 hours
+   -Render results: 3 hours
     
-Testing: 3 hours
+   -Testing: 3 hours
     fixing errors
     
 Debugging: 3 hours
+
+
+## Code Snippet
+
+## Change Log
 
  
