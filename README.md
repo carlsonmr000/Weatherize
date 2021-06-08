@@ -75,37 +75,26 @@ Phone Wireframe: https://github.com/carlsonmr000/Weatherize/issues/3#issue-91519
 
 -sun rays animation for sunny days
 
-### Goals: 
-
-Tuesday:HTML/CSS 
-
-Wednesday:Javascript 
-
-Thursday: Debugging
-
-Friday:Deployment
-
-Monday: Present
-
 ## Priority Matrix 
 
 https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
 ## Timeframe
 
-|          Component        |Priority | Estimated Time | Time Invested | Actual Time |
-| : ------------------------| ------  | ------------   | -----------   | ------------|
-| Initial HTML basic layout |   H     |     3 hours    |               |             |
-| Define Target Audie              |   H
-| Decide User Navigation  
-| Create functions
-| Build landing page  
-| CSS layout  
-| Styling 
-| Media query  
-| General Research 
-| Debugging  
-| Total  
+| Component | Priority | Estimated Time | Time Invested| Actual Time | Axios | Debugging|Javascript
+| --- | :---: |  :---: | :---: | :---: | :---: | :---: | :---: |
+| Initial HTML| M | 3hrs|  X | X |   |  |   |
+| Basic landing page| M | 3hrs|  X | X |   |  |   |
+| Fetch data| M | 3hrs|  X | X |   |  |   |
+| Axios set up | H | 3hrs|   |  X|  X |X  | x  |
+| Render results | H | 3hrs|    |  |  X | x|  x |
+| Basic CSS| H | 3hrs|    |  |  X |  X|   x|
+| Mobile Media Query | H | 3hrs|    |  |  X | x|  x |
+| Desktop Media Query | H | 3hrs|    |  |  X | x|  x |
+| Styling | M | 3hrs|   X |  X|   |  |   |
+| Debugging | H | 3hrs| X  | X |   |  |   |
+| Total | H | 30hrs|    |  |   |  |   | (edited) 
+  
 
 ## Goals
 
@@ -119,34 +108,9 @@ https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 | Sunday | M | 1hrs| X  | X |   |  |   |
 | Total | H | 30hrs|    |  |   |  |   | (edited) 
 
- 
-    
-### CSS
 
-   -basic layout: 3 hours
-   
-   -styling: 3 hours
-   
-   -add desktop media query 2 hours
-   
-   -add mobile media query: 1 hour
-    
-### Javascript
-    
-   -Axios call: 3 hours
-   
-   -Functions: 3 hours
-   
-   -Render results: 3 hours
-    
-   -Testing: 3 hours
-    fixing errors
-    
-Debugging: 3 hours
+### Code Snippet
 
-
-## Code Snippet
-
-## Change Log
+### Change Log
 
  
