@@ -41,7 +41,7 @@ Open Weather Map API: api.openweathermap.org/data/2.5/weather?q={city name}&appi
 
 Desktop Wireframe: https://github.com/carlsonmr000/Weatherize/issues/1#issue-915036469
 
-Phone Wireframe:  https://github.com/carlsonmr000/Weatherize/issues/4#issue-915371876
+Phone Wireframe:  
 
 ## MVP/PostMVP
 
