@@ -1,18 +1,41 @@
-const DOMAIN = 'https://openweathermap.org/api';
-const API_KEY = "09f877c9272bc64e109cd676a8422c51";
-const url = `aapi.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`;
-
 //variables
+const button = document.querySelector('#search');
+const domain = 'https://api.openweathermap.org/data/2.5/weather?q=';
+const api_key = "09f877c9272bc64e109cd676a8422c51";
 
-const city = search.value
+const getCity = async (city) => {
 
-try {
-
-    const result = await axios.get(url + city);
-    console.log(result);
+    const base_url = `${domain}${city}&appid=${api_key}`;
 
 
-} catch (error) {
-    console.log(error.message);
+    try {
+        console.log("hello from the file", city);
+        const result = await axios.get(base_url);
+        console.log(result);
+        const response = result.data.main.temp;
+        console.log(response);
+        let temp = ((response - 273.15) * 1.8) + 32;
+        console.log(parseInt(temp));
+   
+
+
+    } catch (error) {
+        console.log(error.message);
+    }
 }
+getCity("Chicago");
+
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let city = document.querySelector('#blank').value;
+    //console.log(city);
+    getCity(city); 
+});
+
+let tempButton = document.createElement('p');
+tempButton.addEventListener('click', function() {
+
+  let temp = ((kelvin - 273.15) * 1.8) + 32;
+ });
 

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: light;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.search-section {
+  background-color: rgb(220, 255, 252);
+  border: 2px solid black;
+}
+
+.container .display-box {
+  /* background-color: yellow; */
+}
+
+.container {
+  /* background-color: green; */
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.container .display-box h1 {
+  color: indigo;
+}
+
+h2 {
+  color: black;
+}

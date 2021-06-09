@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <title>Weatherize</title>
 </head>
 <body>
     
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#find">Find</a>
+    </nav>
+  </header>
 
+  <main>
 
+    <section>
+        <div class="search-section">
+            <h1>What's the weather today?</h1>
+            <input type="text" id="blank" placeholder="Search a city">
+            <button id="search">Search</button>
+        </div>
+    </section>
+
+    <section class="city-list">
+        <h2 class="cl"></h2>
+      </section>
+     
+    </section>
     
+
+    <footer>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#find">Find</a>
+          </nav>
+        <small>&copy; Weatherize 2021</small>
+      </footer>
+
 </body>
 </html>
