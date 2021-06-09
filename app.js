@@ -24,7 +24,7 @@ const getCity = async (city) => {
     try {
         //console.log("hello from the file", city);
         const result = await axios.get(base_url);
-        //console.log(result);
+        console.log(result);
         const cityName = result.data.name;
         //console.log(cityName);
         const kelvin = result.data.main.temp;
@@ -40,24 +40,35 @@ const getCity = async (city) => {
 }
 //getCity("Chicago");
 
-const displayResults = async (city) => {
+    const displayResults = async (city) => {
     
     
     const main = document.querySelector('#main');
     const base_url = `${domain}${city}&appid=${api_key}`;
     
     const result = await axios.get(base_url);
-    // const container = document.createElement('div');
-    // container.setAttribute('id', parent-container)
+   
+    const name = document.createElement('h1');
+    name.innerText = result.data.name;
+    parentContainer.appendChild(name);
+
+    const country = document.createElement('h3');
+    country.innerText = result.data.sys.country;
+    parentContainer.appendChild(country);
     
 
     const tempResult = document.createElement('h1');
     tempResult.innerText = Math.floor(result.data.main.temp);
     parentContainer.appendChild(tempResult);
 
-    const name = document.createElement('h1');
-    name.innerText = result.data.name;
-    parentContainer.appendChild(name);
+
+    const weather = document.createElement('h2');
+    weather.innerText = result.data.weather[0].description;
+    parentContainer.appendChild(weather);
+
+
+
+
     
    
 
