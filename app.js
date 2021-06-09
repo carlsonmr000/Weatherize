@@ -12,10 +12,9 @@ const getCity = async (city) => {
         console.log("hello from the file", city);
         const result = await axios.get(base_url);
         console.log(result);
-        const response = result.data.main.temp;
+        const response = result.data.name;
         console.log(response);
-        let temp = ((response - 273.15) * 1.8) + 32;
-        console.log(parseInt(temp));
+      
    
 
 
@@ -25,6 +24,28 @@ const getCity = async (city) => {
 }
 getCity("Chicago");
 
+// const getTemperature = async (city) => {
+
+//     const base_url = `${domain}${city}&appid=${api_key}`;
+
+
+//     try {
+//         console.log("hello from the file", city);
+//         const result = await axios.get(base_url);
+//         console.log(result);
+//         const response = result.data.main.temp;
+//         console.log(response);
+//         let temp = ((response - 273.15) * 1.8) + 32;
+//         console.log(parseInt(temp));
+   
+
+
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// }
+// getCity("Chicago");
+
 button.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -33,9 +54,5 @@ button.addEventListener('click', (e) => {
     getCity(city); 
 });
 
-let tempButton = document.createElement('p');
-tempButton.addEventListener('click', function() {
-
-  let temp = ((kelvin - 273.15) * 1.8) + 32;
- });
+ 
 
