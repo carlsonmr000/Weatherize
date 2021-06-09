@@ -12,8 +12,11 @@ const getCity = async (city) => {
         console.log("hello from the file", city);
         const result = await axios.get(base_url);
         console.log(result);
-        const response = result.data.name;
-        console.log(response);
+        const cityName = result.data.name;
+        console.log(cityName);
+        const kelvin = result.data.main.temp;
+        const temp = ((kelvin - 273.15) * 1.8) + 32;
+        console.log(parseInt(temp));
       
    
 
@@ -30,7 +33,7 @@ getCity("Chicago");
 
 
 //     try {
-//         console.log("hello from the file", city);
+
 //         const result = await axios.get(base_url);
 //         console.log(result);
 //         const response = result.data.main.temp;
@@ -44,7 +47,7 @@ getCity("Chicago");
 //         console.log(error.message);
 //     }
 // }
-// getCity("Chicago");
+// getTemperature();
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -52,6 +55,7 @@ button.addEventListener('click', (e) => {
     let city = document.querySelector('#blank').value;
     //console.log(city);
     getCity(city); 
+    // getTemperature();
 });
 
  
