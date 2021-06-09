@@ -16,6 +16,13 @@ h1 {
   margin: 10px;
 }
 
+#parent-container h1 {
+  color: white;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
 .search-section {
   background-color: rgb(220, 255, 252);
   border: 2px solid black;

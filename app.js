@@ -61,6 +61,13 @@ const getCity = async (city) => {
     tempResult.innerText = Math.floor(result.data.main.temp);
     parentContainer.appendChild(tempResult);
 
+    const maxTemp = document.createElement('h4');
+    maxTemp.innerText = Math.floor(result.data.main.temp_max);
+    parentContainer.appendChild(maxTemp);
+
+    const minTemp = document.createElement('h3');
+    minTemp.innerText = Math.floor(result.data.main.temp_min);
+    parentContainer.appendChild(minTemp);
 
     const weather = document.createElement('h2');
     weather.innerText = result.data.weather[0].description;
