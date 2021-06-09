@@ -1,6 +1,6 @@
 //variables
 const button = document.querySelector('#search');
-const domain = 'https://api.openweathermap.org/data/2.5/weather?q=';
+const domain = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
 const api_key = "09f877c9272bc64e109cd676a8422c51";
 
 const getCity = async (city) => {
@@ -18,7 +18,6 @@ const getCity = async (city) => {
         const temp = ((kelvin - 273.15) * 1.8) + 32;
         console.log(parseInt(temp));
         displayResults(city);
-        
 
 
 
@@ -30,14 +29,24 @@ getCity("Chicago");
 
 const displayResults = async (city) => {
 
+    const main = document.querySelector('#main');
     const base_url = `${domain}${city}&appid=${api_key}`;
-
+    
     const result = await axios.get(base_url);
     const container = document.createElement('div');
+
+
     const name = document.createElement('h1');
     name.innerText = result.data.name;
     container.appendChild(name);
-    
+   
+    const tempResult = document.createElement('h1');
+    tempResult.innerText = Math.floor(result.data.main.temp);
+    container.appendChild(tempResult);
+
+
+
+    main.append(container);
 }
 
 
