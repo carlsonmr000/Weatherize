@@ -57,7 +57,7 @@ const getCity = async (city) => {
     parentContainer.appendChild(country);
     
 
-    const tempResult = document.createElement('h1');
+    const tempResult = document.createElement('h2');
     tempResult.innerText = Math.floor(result.data.main.temp);
     parentContainer.appendChild(tempResult);
 
