@@ -16,6 +16,7 @@ function removeSearch() {
         parentContainer.removeChild(parentContainer.lastChild)
     }
 }
+
 const getCity = async (city) => {
     removeSearch();
     const base_url = `${domain}${city}&appid=${api_key}`;
@@ -49,13 +50,16 @@ const getCity = async (city) => {
     const result = await axios.get(base_url);
     console.log(result);
    
+    const cityBox = document.createElement('div');
     const name = document.createElement('h1');
     name.innerText = result.data.name;
-    parentContainer.appendChild(name);
-
-    const country = document.createElement('h3');
-    country.innerText = result.data.sys.country;
-    parentContainer.appendChild(country);
+    cityBox.appendChild(name);
+    parentContainer.appendChild(cityBox);
+    
+    const descriptionBox = document.createElement('div');
+    const weather = document.createElement('h2');
+    weather.innerText = `Weather description: ${result.data.weather[0].description}`;
+    parentContainer.appendChild(weather);
     
     const tempResult = document.createElement('h2');
     tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
@@ -69,13 +73,16 @@ const getCity = async (city) => {
     minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
     parentContainer.appendChild(minTemp);
 
-    const weather = document.createElement('h2');
-    weather.innerText = `Weather description: ${result.data.weather[0].description}`;
-    parentContainer.appendChild(weather);
 
     const feelsLike = document.createElement('h2');
     feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
-    parentContainer.appendChild(weather);
+    parentContainer.appendChild(feelsLike);
+
+    const wind = document.createElement('h2');
+    wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
+    parentContainer.appendChild(wind);
+
+
 
 
     main.append(parentContainer);
@@ -97,4 +104,13 @@ button.addEventListener('click', (e) => {
     removeSearch();
 
  
-
+        //color #fcedd8
+    //   5px 5px 0px #ffbd00, 
+    //   10px 10px 0px #ff5400, 
+    //   15px 15px 0px #ff0054,
+    //   20px 20px 0px #9e0059, 
+    //   25px 25px 0px #390099, 
+    //   30px 30px 0px #c11a2b,
+    //   35px 35px 0px #c11a2b, 
+    //   40px 40px 0px #c11a2b, 
+    //   45px 45px 0px #c11a2b;
