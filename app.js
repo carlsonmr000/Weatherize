@@ -50,7 +50,6 @@ const getCity = async (city) => {
     const result = await axios.get(base_url);
     console.log(result);
    
-    const cityBox = document.createElement('div');
     const name = document.createElement('h1');
     name.innerText = result.data.name;
     cityBox.appendChild(name);
@@ -82,11 +81,14 @@ const getCity = async (city) => {
     const feelsLikeBox = document.createElement('div');
     const feelsLike = document.createElement('h2');
     feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
-    parentContainer.appendChild(feelsLike);
+    feelsLikeBox.appendChild(feelsLike);
+    parentContainer.appendChild(feelsLikeBox);
 
+    const windBox = document.createElement('div');
     const wind = document.createElement('h2');
     wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
-    parentContainer.appendChild(wind);
+    windBox.appendChild(wind);
+    parentContainer.appendChild(windBox);
 
     main.append(parentContainer);
 }
