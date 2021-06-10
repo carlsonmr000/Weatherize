@@ -59,21 +59,27 @@ const getCity = async (city) => {
     const descriptionBox = document.createElement('div');
     const weather = document.createElement('h2');
     weather.innerText = `Weather description: ${result.data.weather[0].description}`;
-    parentContainer.appendChild(weather);
+    descriptionBox.appendChild(weather);
+    parentContainer.appendChild(descriptionBox);
     
+    const tempBox = document.createElement('div')
     const tempResult = document.createElement('h2');
     tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
-    parentContainer.appendChild(tempResult);
+    tempBox.appendChild(tempResult);
+    parentContainer.appendChild(tempBox);
 
     const maxTemp = document.createElement('h4');
     maxTemp.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
-    parentContainer.appendChild(maxTemp);
+    tempBox.appendChild(maxTemp);
+    parentContainer.appendChild(tempBox);
 
     const minTemp = document.createElement('h3');
     minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
-    parentContainer.appendChild(minTemp);
+    tempBox.appendChild(minTemp);
+    parentContainer.appendChild(tempBox);
 
 
+    const feelsLikeBox = document.createElement('div');
     const feelsLike = document.createElement('h2');
     feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
     parentContainer.appendChild(feelsLike);
@@ -82,35 +88,32 @@ const getCity = async (city) => {
     wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
     parentContainer.appendChild(wind);
 
-
-
-
     main.append(parentContainer);
 }
 
 button.addEventListener('click', (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    // const remove = document.querySelector('#parent-container');
-    // console.log(remove);
-    // remove.childNodes.forEach(node => {node.remove()});
-    // console.log(remove);
+ 
 
     let city = document.querySelector('#blank').value;
     //console.log(city);
     getCity(city); 
  
  }); 
+
+//  button.addEventListener('keyup', (e) => {
+//     e.preventDefault();
+//     let city = document.querySelector('#blank').value;
+//     getCity(city);
+
+//     if(e.keyCode === 13) {
+//         alert('hi');
+//     }
+ 
+//  }); 
+
     removeSearch();
 
  
-        //color #fcedd8
-    //   5px 5px 0px #ffbd00, 
-    //   10px 10px 0px #ff5400, 
-    //   15px 15px 0px #ff0054,
-    //   20px 20px 0px #9e0059, 
-    //   25px 25px 0px #390099, 
-    //   30px 30px 0px #c11a2b,
-    //   35px 35px 0px #c11a2b, 
-    //   40px 40px 0px #c11a2b, 
-    //   45px 45px 0px #c11a2b;
+      

@@ -12,13 +12,58 @@ body {
   margin: 0;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-end; */
+  /* align-content: flex-end; */
+  align-self: flex-end;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: ;
+  height: 50px;
+  width: 900px;
+  float: right;
+  margin: 10px 2px;
+  padding: 0 auto;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-end;
+  font-size: 1rem;
+  padding: 5px 25px;
+  background-color: #390099;
+  box-shadow: 5px 10px #9e0059;
+  color: antiquewhite;
+  border-radius: 6px;
+  border: 5px solid black;
+  font-family: "Arial", sans serif;
+  font-weight: bolder;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #5f0f40;
+  color: white;
+}
+
 h1 {
   margin: 20px;
 }
 
 .main-text {
+  padding: 0 auto;
   display: flex;
-  font-size: 15rem;
+  font-size: 9rem;
   text-align: center;
   justify-content: center;
   /* height: 90vh; */
@@ -31,7 +76,7 @@ h1 {
     20px 20px 0px #9e0059, 25px 25px 0px #390099, 35px 35px 0px #5f0f40,
     35px 35px 0px #c11a2b, 35px 35px 0px #c11a2b, 45px 45px 0px #c11a2b;
 
-  border-radius: 6px;
+  border-radius: 50%;
   border: 10px solid #5f0f40;
   /* I found the code for the shadow effect from Shireen Taj at unblast link: https://codepen.io/TajShireen/pen/abzmoRE
  */
@@ -41,8 +86,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  padding: 5px 100px 8px 100px;
+  font-size: 12px;
+  padding: 2.5px 50px 4px 50px;
   background-color: #9e0059;
   color: white;
   border-radius: 25px;
@@ -64,8 +109,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  padding: 5px 25px;
+  font-size: 12px;
   background-color: white;
   box-shadow: 5px 10px #390099;
   color: #5f0f40;
@@ -123,7 +167,15 @@ h1 {
 }
 
 h2 {
-  color: black;
+  background-color: red;
+}
+
+h3 {
+  background-color: white;
+}
+
+h4 {
+  background-color: blue;
 }
 
 #end {
@@ -132,22 +184,10 @@ h2 {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-}
-
-nav a {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: flex-end;
-  font-size: 1.2rem;
-  padding: 5px 25px;
-  background-color: #c11a2b;
-  /* box-shadow: 5px 10px #390099; */
-  color: white;
-  border-radius: 6px;
-  border: 5px solid black;
-  font-family: "Arial", sans serif;
-  font-weight: bolder;
-  margin: 0 auto;
-  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 20px;
+  font-size: 20px;
+  color: #5f0f40;
 }
