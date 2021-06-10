@@ -25,17 +25,31 @@
   </header>
 
   <main>
+     <div id="homepage">
+         <div class="header-div">
+            <div class="search-section">
+                <h1 class="main-text">What's the weather today?</h1>
+                <input type="text" id="blank" placeholder="Search a city">
+                <button id="search">Search</button>
+            </div>
+         </div>   
 
-    <section id="main">
-        <div class="search-section">
-            <h1 class="main-text">What's the weather today?</h1>
-            <input type="text" id="blank" placeholder="Search a city">
-            <button id="search">Search</button>
+    
+        <div class="results-div">
+            <div id="city-container">
+                <div class="city">city</div>
+                <div class="current-temp">current temp</div>
+                <div class="description">description</div>
+            </div>
+        
+            <div id="details-container">
+                <div class="high">high</div>
+                <div class="low">low</div>
+                <div class="wind">wind</div>
+            </div>
         </div>
-    </section>
-
-    <div id="parent-container"></div>
- 
+    </div>
+  </main>
 
     <footer id="end">
         <small>&copy; Maximiliana Carlson 2021</small>

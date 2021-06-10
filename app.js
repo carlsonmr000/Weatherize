@@ -50,45 +50,33 @@ const getCity = async (city) => {
     const result = await axios.get(base_url);
     console.log(result);
    
-    const name = document.createElement('h1');
-    name.innerText = result.data.name;
-    cityBox.appendChild(name);
-    parentContainer.appendChild(cityBox);
+     const name = document.querySelector('.box1');
+     name.innerText = result.data.name;
+     parentContainer.appendChild(name);
     
-    const descriptionBox = document.createElement('div');
-    const weather = document.createElement('h2');
-    weather.innerText = `Weather description: ${result.data.weather[0].description}`;
-    descriptionBox.appendChild(weather);
-    parentContainer.appendChild(descriptionBox);
+     const weather = document.querySelector('h2');
+     weather.innerText = `Weather description: ${result.data.weather[0].description}`;
+     parentContainer.appendChild(weather);
     
-    const tempBox = document.createElement('div')
-    const tempResult = document.createElement('h2');
-    tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
-    tempBox.appendChild(tempResult);
-    parentContainer.appendChild(tempBox);
+     const tempResult = document.querySelector('h2');
+     tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
+     parentContainer.appendChild(tempResult);
 
-    const maxTemp = document.createElement('h4');
+    const maxTemp = document.querySelector('h4');
     maxTemp.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
-    tempBox.appendChild(maxTemp);
-    parentContainer.appendChild(tempBox);
+    parentContainer.appendChild(maxTemp);
 
-    const minTemp = document.createElement('h3');
-    minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
-    tempBox.appendChild(minTemp);
-    parentContainer.appendChild(tempBox);
+     const minTemp = document.querySelector('h3');
+     minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
+     parentContainer.appendChild(minTemp);
 
-
-    const feelsLikeBox = document.createElement('div');
-    const feelsLike = document.createElement('h2');
+     const feelsLike = document.querySelector('h2');
     feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
-    feelsLikeBox.appendChild(feelsLike);
-    parentContainer.appendChild(feelsLikeBox);
+     parentContainer.appendChild(feelsLike);
 
-    const windBox = document.createElement('div');
-    const wind = document.createElement('h2');
-    wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
-    windBox.appendChild(wind);
-    parentContainer.appendChild(windBox);
+     const wind = document.querySelector('h2');
+     wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
+     parentContainer.appendChild(wind);
 
     main.append(parentContainer);
 }
@@ -103,18 +91,6 @@ button.addEventListener('click', (e) => {
     getCity(city); 
  
  }); 
-
-//  button.addEventListener('keyup', (e) => {
-//     e.preventDefault();
-//     let city = document.querySelector('#blank').value;
-//     getCity(city);
-
-//     if(e.keyCode === 13) {
-//         alert('hi');
-//     }
- 
-//  }); 
-
     removeSearch();
 
  
