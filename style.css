@@ -14,16 +14,23 @@ body {
 
 h1 {
   margin: 20px;
-  padding: 10px;
-  height: 100px;
-  width: 100px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 400px;
 }
 
 #parent-container h1 {
   color: white;
-  background-color: green;
+  background-color: rgb(237, 179, 156);
   border: 2px solid black;
   border-radius: 6px;
+  padding: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 .search-section {
@@ -47,4 +54,10 @@ h1 {
 
 h2 {
   color: black;
+}
+
+#end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -47,6 +47,7 @@ const getCity = async (city) => {
     const base_url = `${domain}${city}&appid=${api_key}`;
     
     const result = await axios.get(base_url);
+    console.log(result);
    
     const name = document.createElement('h1');
     name.innerText = result.data.name;
@@ -56,53 +57,29 @@ const getCity = async (city) => {
     country.innerText = result.data.sys.country;
     parentContainer.appendChild(country);
     
-
     const tempResult = document.createElement('h2');
-    tempResult.innerText = Math.floor(result.data.main.temp);
+    tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
     parentContainer.appendChild(tempResult);
 
     const maxTemp = document.createElement('h4');
-    maxTemp.innerText = Math.floor(result.data.main.temp_max);
+    maxTemp.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
     parentContainer.appendChild(maxTemp);
 
     const minTemp = document.createElement('h3');
-    minTemp.innerText = Math.floor(result.data.main.temp_min);
+    minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
     parentContainer.appendChild(minTemp);
 
-    const sunrise = document.createElement('h3');
-    sunrise.innerText = result.data.sys.sunrise;
-    parentContainer.appendChild(sunrise);
-
-    const sunset = document.createElement('h3');
-    sunset.innerText = result.data.sys.sunset;
-    parentContainer.appendChild(sunset);
-
     const weather = document.createElement('h2');
-    weather.innerText = result.data.weather[0].description;
+    weather.innerText = `Weather description: ${result.data.weather[0].description}`;
     parentContainer.appendChild(weather);
 
     const feelsLike = document.createElement('h2');
-    feelsLike.innerText = result.data.main.feels_like;
+    feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
     parentContainer.appendChild(weather);
-
-    const wind = document.createElement('h2');
-    wind.innerText = result.data.wind.speed;
-    parentContainer.appendChild(wind);
-
-    
-
-
-
-    
-   
-
 
 
     main.append(parentContainer);
 }
-
-
- 
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
