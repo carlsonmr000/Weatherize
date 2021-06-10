@@ -2,18 +2,18 @@
 const button = document.querySelector('#search');
 const domain = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q=';
 const api_key = "09f877c9272bc64e109cd676a8422c51";
-const parentContainer = document.querySelector('#parent-container')
+const resultsDiv = document.querySelector('.results-div');
 
 // const logInput = (event) => {
 //     event.preventDefault();
 //     getCity();
-    
+     
 // }
 
 function removeSearch() {
 
-    while(parentContainer.lastChild) {
-        parentContainer.removeChild(parentContainer.lastChild)
+    while(resultsDiv.lastChild) {
+        resultsDiv.removeChild(resultsDiv.lastChild)
     }
 }
 
@@ -27,10 +27,10 @@ const getCity = async (city) => {
         const result = await axios.get(base_url);
         console.log(result);
         const cityName = result.data.name;
-        //console.log(cityName);
+        console.log(cityName);
         const kelvin = result.data.main.temp;
         const temp = ((kelvin - 273.15) * 1.8) + 32;
-        //console.log(parseInt(temp));
+        console.log(parseInt(temp));
         displayResults(city);
 
 
@@ -44,41 +44,41 @@ const getCity = async (city) => {
     const displayResults = async (city) => {
     
     
-    const main = document.querySelector('#main');
+    const landing = document.querySelector('#landing');
     const base_url = `${domain}${city}&appid=${api_key}`;
     
     const result = await axios.get(base_url);
     console.log(result);
    
-     const name = document.querySelector('.box1');
-     name.innerText = result.data.name;
-     parentContainer.appendChild(name);
+     const name2 = document.querySelector('.city');
+     name2.innerText = result.data.name;
+     resultsDiv.appendChild(name2);
     
-     const weather = document.querySelector('h2');
+     const weather = document.querySelector('.description');
      weather.innerText = `Weather description: ${result.data.weather[0].description}`;
-     parentContainer.appendChild(weather);
+     resultsDiv.appendChild(weather);
     
-     const tempResult = document.querySelector('h2');
-     tempResult.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
-     parentContainer.appendChild(tempResult);
+     const tempResult = document.querySelector('.current-temp');
+     tempResult.innerText = `Current temp: ${Math.floor(temp)}°F`;
+     resultsDiv.appendChild(tempResult);
 
-    const maxTemp = document.querySelector('h4');
+    const maxTemp = document.querySelector('.high');
     maxTemp.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
-    parentContainer.appendChild(maxTemp);
+    resultsDiv.appendChild(maxTemp);
 
-     const minTemp = document.querySelector('h3');
+     const minTemp = document.querySelector('.low');
      minTemp.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
-     parentContainer.appendChild(minTemp);
+     resultsDiv.appendChild(minTemp);
 
-     const feelsLike = document.querySelector('h2');
+     const feelsLike = document.querySelector('.feels-like');
     feelsLike.innerText = `Feels like: ${result.data.main.feels_like}°F`;
-     parentContainer.appendChild(feelsLike);
+     resultsDiv.appendChild(feelsLike);
 
-     const wind = document.querySelector('h2');
+     const wind = document.querySelector('.wind');
      wind.innerText = `Wind speed: ${result.data.wind.speed}mph`;
-     parentContainer.appendChild(wind);
+     resultsDiv.appendChild(wind);
 
-    main.append(parentContainer);
+    landing.append(resultsDiv);
 }
 
 button.addEventListener('click', (e) => {
@@ -91,6 +91,7 @@ button.addEventListener('click', (e) => {
     getCity(city); 
  
  }); 
+
     removeSearch();
 
  

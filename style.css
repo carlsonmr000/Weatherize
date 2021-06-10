@@ -63,12 +63,13 @@ nav a:hover {
 .main-text {
   padding: 0 auto;
   display: flex;
-  font-size: 15rem;
+  font-size: 9rem;
   text-align: center;
   justify-content: center;
   /* height: 90vh; */
   /* line-height: 90vh; */
-  color: #fcedd8;
+  /* color: #fcedd8; */
+  color: black;
   background: #c11a2b;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
@@ -130,36 +131,11 @@ nav a:hover {
   color: #5f0f40;
 }
 
-#main {
+#homepage {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 100px;
-}
-
-/* #parent-container h1 {
-  color: white;
-  background-color: rgb(237, 179, 156);
-  border: 2px solid black;
-  border-radius: 6px;
-  padding: 10px;
-  height: 100px;
-  width: 100px;
-} */
-
-.box1 {
-  background-color: blue;
-  height: 100px;
-  width: 100px;
-}
-
-.search-section {
-  /* background-color: rgb(220, 255, 252); */
-  /* border: 2px solid black; */
-}
-
-.city-box {
-  background-color: blue;
 }
 
 #end {
