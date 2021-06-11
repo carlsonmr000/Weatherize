@@ -85,7 +85,7 @@ const getCity = async (city) => {
     low.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
     container.appendChild(low);
 
-     const realTemp = document.createElement('h3');
+     const realTemp = document.createElement('h4');
      realTemp.innerText = `Feels like: ${Math.floor(result.data.main.feels_like)}°F`;
      containerTwo.appendChild(realTemp);
 

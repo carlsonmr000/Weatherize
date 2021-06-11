@@ -62,7 +62,7 @@ nav a:hover {
 .main-text {
   padding: 0 auto;
   display: flex;
-  font-size: 15rem;
+  font-size: 3rem;
   text-align: center;
   justify-content: center;
   /* height: 90vh; */
@@ -86,7 +86,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1rem;
   padding: 2.5px 50px 4px 50px;
   background-color: #9e0059;
   color: white;
@@ -109,7 +109,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1rem;
   background-color: white;
   box-shadow: 5px 10px #390099;
   color: #5f0f40;
@@ -137,18 +137,21 @@ nav a:hover {
   margin: 100px;
 }
 
-#container {
-  display: flex;
-  align-content: space-around;
+.container {
+  display: grid;
+  grid-template-areas: 
+  "a b"
+  "c d";
+   align-content: space-around; 
   width: 800px;
   color: white;
   height: auto;
   margin: 0 auto;
-  position: relative;
-  justify-content: center;
+  
+  
 }
 
-.display-box-a {
+.display-box {
   display: flex;
   position: relative;
   background-color: #9e0059;
@@ -157,64 +160,36 @@ nav a:hover {
   text-align: center;
   overflow: hidden;
   border-radius: 6px;
-  height: 50vh;
-  width: 50vw;
+  height: 10vh;
+  width: 10vw;
   border: 10px solid black;
   margin: 50px auto;
-  /* font-size: 3rem; */
+  font-size: 3rem; 
 }
 
-.display-box-b {
-  display: flex;
-  position: relative;
-  background-color: #9e0059;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 50vh;
-  width: 50vw;
-  border: 10px solid black;
-  margin: 50px auto;
-  /* font-size: 3rem; */
+
+#one {
+  grid-area: a;
+   
 }
 
-/* .container .display-box-c {
+#two {
+  grid-area: b;
+   
+}
+
+ #three {
   display: grid;
   grid-area: c;
-  position: relative;
-  background-color: #9e0059;
-  padding: 10px 20px;
-  padding-bottom: 40%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 550px;
-  width: 550px;
-  border: 5px solid black;
-  margin: 5%;
+  
 }
 
-.container .display-box-d {
+     #four {
   display: grid;
   grid-area: d;
-  position: relative;
-  background-color: #9e0059;
-  padding: 10px 20px;
-  padding-bottom: 40%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 550px;
-  width: 550px;
-  border: 5px solid black;
-  margin: 5%; */
-/* } */
-/* 
+  
+ } 
+/*
 .resultsDiv #details-container {
   position: relative;
   background-color: blue;
@@ -228,25 +203,25 @@ nav a:hover {
 h1 {
   color: white;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 2.2rem;
 }
 
 h2 {
   color: white;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 2.2em;
 }
 
 h3 {
   color: white;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 2.2rem;
 }
 
 h4 {
   color: white;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 2.8rem;
 }
 
 #end {
@@ -276,8 +251,7 @@ h4 {
     background: #c11a2b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
-    text-shadow: 5px 5px 0px #ffbd00, 10px 10px 0px #ff5400,
-      15px 15px 0px #ff0054, 20px 20px 0px #9e0059;
+     
   }
 
   #search {
@@ -314,99 +288,4 @@ h4 {
     font-size: 1rem;
   }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {
-    background: green;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .main-text {
-    font-size: 4rem;
-  }
-
-  #search {
-    font-size: 3rem;
-  }
-
-  #blank {
-    font-size: 3rem;
-  }
-
-  .display-box-a {
-    height: 50vh;
-    width: 50vw;
-  }
-
-  .display-box-b {
-    height: 50vh;
-    width: 50vw;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 4rem;
-  }
-
-  h3 {
-    font-size: 4rem;
-  }
-
-  h4 {
-    font-size: 4rem;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  @media only screen and (max-width: 600px) {
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-
-  @media only screen and (min-width: 1200px) {
-    .main-text {
-      font-size: 6rem;
-    }
-
-    #search {
-      font-size: 3rem;
-    }
-
-    #blank {
-      font-size: 3rem;
-    }
-
-    .display-box-a {
-      height: 50vh;
-      width: 50vw;
-    }
-
-    .display-box-b {
-      height: 50vh;
-      width: 50vw;
-    }
-
-    h1 {
-      font-size: 6rem;
-    }
-
-    h2 {
-      font-size: 6rem;
-    }
-
-    h3 {
-      font-size: 6rem;
-    }
-
-    h4 {
-      font-size: 6rem;
-    }
-  }
-}
+ 
