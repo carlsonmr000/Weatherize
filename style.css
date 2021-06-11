@@ -264,9 +264,149 @@ h4 {
   padding-top: 10%;
 }
 
-/* @media (maxw-width: 600px) {
-  .container {
-    width: 400px;
-    height: auto;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-text {
+    font-size: 2rem;
+    padding: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #fcedd8;
+    background: #c11a2b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    text-shadow: 5px 5px 0px #ffbd00, 10px 10px 0px #ff5400,
+      15px 15px 0px #ff0054, 20px 20px 0px #9e0059;
   }
-} */
+
+  #search {
+    font-size: 0.5rem;
+  }
+
+  #blank {
+    font-size: 0.5rem;
+  }
+
+  .display-box-a {
+    height: 20vh;
+    width: 20vw;
+  }
+
+  .display-box-b {
+    height: 20vh;
+    width: 20vw;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main-text {
+    font-size: 4rem;
+  }
+
+  #search {
+    font-size: 3rem;
+  }
+
+  #blank {
+    font-size: 3rem;
+  }
+
+  .display-box-a {
+    height: 50vh;
+    width: 50vw;
+  }
+
+  .display-box-b {
+    height: 50vh;
+    width: 50vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size: 4rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  @media only screen and (max-width: 600px) {
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+  @media only screen and (min-width: 1200px) {
+    .main-text {
+      font-size: 6rem;
+    }
+
+    #search {
+      font-size: 3rem;
+    }
+
+    #blank {
+      font-size: 3rem;
+    }
+
+    .display-box-a {
+      height: 50vh;
+      width: 50vw;
+    }
+
+    .display-box-b {
+      height: 50vh;
+      width: 50vw;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    h2 {
+      font-size: 6rem;
+    }
+
+    h3 {
+      font-size: 6rem;
+    }
+
+    h4 {
+      font-size: 6rem;
+    }
+  }
+}
