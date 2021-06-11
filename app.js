@@ -5,14 +5,9 @@ const api_key = "09f877c9272bc64e109cd676a8422c51";
 //const container = document.querySelector('.container');
 const container = document.querySelector('#one');
 const containerTwo = document.querySelector('#two');
+const containerThree = document.querySelector('#three');
+const containerFour = document.querySelector('#four')
 
-
-
-// const logInput = (event) => {
-//     event.preventDefault();
-//     getCity();
-     
-// }
 
 function removeSearch() {
 
@@ -27,10 +22,24 @@ function removeSearchTwo () {
     }
 }
 
+function removeSearchThree () {
+    while(containerThree.lastChild) {
+        containerThree.removeChild(containerThree.lastChild)
+    }
+}
+
+function removeSearchFour () {
+    while(containerFour.lastChild) {
+        containerFour.removeChild(containerFour.lastChild)
+    }
+}
+
 const getCity = async (city) => {
     //container.remove();
     removeSearch();
     removeSearchTwo();
+    removeSearchThree();
+    removeSearchFour();
     const base_url = `${domain}${city}&appid=${api_key}`;
 
 
@@ -68,67 +77,33 @@ const getCity = async (city) => {
     nameofCity.innerText = result.data.name;
      container.appendChild(nameofCity);
 
-     const weatherDescription = document.createElement('h3')
+     const weatherDescription = document.createElement('h1')
      weatherDescription.innerText = `Weather: ${result.data.weather[0].description}`;
-     container.appendChild(weatherDescription);
+     containerThree.appendChild(weatherDescription);
 
       const currentTemp = document.createElement('h1');
      currentTemp.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
      container.appendChild(currentTemp);
 
     
-    const high = document.createElement('h2');
+    const high = document.createElement('h1');
     high.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
-    container.appendChild(high);
+    containerTwo.appendChild(high);
 
-    const low = document.createElement('h2');
+    const low = document.createElement('h1');
     low.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
-    container.appendChild(low);
+    containerTwo.appendChild(low);
 
-     const realTemp = document.createElement('h4');
-     realTemp.innerText = `Feels like: ${Math.floor(result.data.main.feels_like)}°F`;
-     containerTwo.appendChild(realTemp);
+    //  const realTemp = document.createElement('h1');
+    //  realTemp.innerText = `Feels like: ${Math.floor(result.data.main.feels_like)}°F`;
+    //  containerTwo.appendChild(realTemp);
 
-     const windSpeed = document.createElement('h4');
+     const windSpeed = document.createElement('h1');
      windSpeed.innerText = `Wind speed: ${result.data.wind.speed}mph`;
-     containerTwo.appendChild(windSpeed);
+     containerFour.appendChild(windSpeed);
 
    
-    //  const cityContainer = document.querySelector('#city-container');
-    //  const nameofCity = document.createElement('h1')
-    //  nameofCity.innerText = result.data.name;
-    //  cityContainer.appendChild(nameofCity)
-    //  resultsDiv.appendChild(cityContainer);
     
-    //  const container = document.querySelector('#one');
-    //  const weatherDescription = document.createElement('h1')
-    //  weatherDescription.innerText = `Weather description: ${result.data.weather[0].description}`;
-    //  container.appendChild(weatherDescription);
-    
-    //  const tempResult = document.querySelector('.current-temp');
-    //  const currentTemp = document.createElement('h2');
-    //  currentTemp.innerText = `Current temp: ${Math.floor(result.data.main.temp)}°F`;
-    //  resultsDiv.appendChild(currentTemp);
-
-    // const maxTemp = document.querySelector('.high');
-    // const high = document.createElement('h2');
-    // high.innerText = `High: ${Math.floor(result.data.main.temp_max)}°F`;
-    // resultsDiv.appendChild(high);
-
-    //  const minTemp = document.querySelector('.low');
-    //  const low = document.createElement('h2');
-    //  low.innerText = `Low: ${Math.floor(result.data.main.temp_min)}°F`;
-    //  resultsDiv.appendChild(low);
-
-    //  const feelsLike = document.querySelector('.feels-like');
-    //  const realTemp = document.createElement('h3')
-    // realTemp.innerText = `Feels like: ${result.data.main.feels_like}°F`;
-    //  resultsDiv.appendChild(realTemp);
-
-    //  const wind = document.querySelector('.wind');
-    //  const windSpeed = document.createElement('h3');
-    //  windSpeed.innerText = `Wind speed: ${result.data.wind.speed}mph`;
-    //  resultsDiv.appendChild(windSpeed);
 
     landing.append(container);
 }
