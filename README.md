@@ -111,15 +111,13 @@ https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
 ### Code Snippet
 
-
 const getCity = async (city) => {
-    //container.remove();
-    removeSearch();
-    removeSearchTwo();
-    removeSearchThree();
-    removeSearchFour();
-    const base_url = `${domain}${city}&appid=${api_key}`;
-
+//container.remove();
+removeSearch();
+removeSearchTwo();
+removeSearchThree();
+removeSearchFour();
+const base_url = `${domain}${city}&appid=${api_key}`;
 
     try {
         //console.log("hello from the file", city);
@@ -134,15 +132,16 @@ const getCity = async (city) => {
         //const resultsDiv = document.querySelector('.results-div');
         //console.log(resultsDiv);
 
-     
+
 
     } catch (error) {
         console.log(error.message);
     }
+
 }
-
-
-
 
 ### Change Log
 
+I initially wanted the information from the API to appear after the user clicks search, but I didn't know how to do that in javascript. So I changed my layout to have empty boxes on the homepage that are filled in afer a user clicks the search button.
+
+To display the boxes, I started with flexbox but they weren't organized the way I wanted them to be. So I switched to grid and put them in 2 rows. But when I was adding the media query, I couldn't get the boxes to fall in a single line. So I put the boxes in a column using the grid method.
