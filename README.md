@@ -111,4 +111,38 @@ https://github.com/carlsonmr000/Weatherize/issues/2#issue-915046529
 
 ### Code Snippet
 
+
+const getCity = async (city) => {
+    //container.remove();
+    removeSearch();
+    removeSearchTwo();
+    removeSearchThree();
+    removeSearchFour();
+    const base_url = `${domain}${city}&appid=${api_key}`;
+
+
+    try {
+        //console.log("hello from the file", city);
+        const result = await axios.get(base_url);
+        console.log(result);
+        const cityName = result.data.name;
+        //console.log(cityName);
+        //const kelvin = result.data.main.temp;
+        //const temp = ((kelvin - 273.15) * 1.8) + 32;
+        //console.log(parseInt(temp));
+        displayResults(city);
+        //const resultsDiv = document.querySelector('.results-div');
+        //console.log(resultsDiv);
+
+     
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+
+
+
 ### Change Log
+
